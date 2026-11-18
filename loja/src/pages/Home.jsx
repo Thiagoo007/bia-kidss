@@ -50,7 +50,7 @@ export default function Home() {
               {categories.slice(0, 8).map((c) => (
                 <li key={c.slug}>
                   <Link className="cats__item" to={`/produtos?cat=${encodeURIComponent(c.name)}`}>
-                    {c.name} <span className="cats__count">{c.count}</span>
+                    {c.name}
                   </Link>
                 </li>
               ))}
