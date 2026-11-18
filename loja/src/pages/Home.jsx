@@ -103,21 +103,23 @@ export default function Home() {
 
       <section className="como" aria-labelledby="como-h">
         <h2 id="como-h">Como o pedido chega até você</h2>
-        <div className="trail" aria-hidden="true">
-          <span className="trail__line" />
-          <span className="trail__go">
-            <span className="trail__hop">
-              <span className="trail__cube"><i /><i /><i /><i /><i /><i /></span>
+        <div className="como__flow">
+          <div className="trail" aria-hidden="true">
+            <span className="trail__line" />
+            <span className="trail__go">
+              <span className="trail__hop">
+                <span className="trail__cube"><i /><i /><i /><i /><i /><i /></span>
+              </span>
             </span>
-          </span>
-          <span className="trail__shadow" />
+            <span className="trail__shadow" />
+          </div>
+          <ol className="steps">
+            <li><b>Escolha as peças.</b> Cada uma mostra os tamanhos disponíveis.</li>
+            <li><b>Monte a sacola.</b> Coloque as peças e escolha o tamanho de cada uma.</li>
+            <li><b>A Bia confirma.</b> Você envia a sacola e ela confere tamanho e estoque.</li>
+            <li><b>Receba ou retire.</b> Combine entrega ou retirada direto com a Bia.</li>
+          </ol>
         </div>
-        <ol className="steps">
-          <li><b>Escolha as peças.</b> Cada uma mostra os tamanhos disponíveis.</li>
-          <li><b>Monte a sacola.</b> Coloque as peças e escolha o tamanho de cada uma.</li>
-          <li><b>A Bia confirma.</b> Você envia a sacola e ela confere tamanho e estoque.</li>
-          <li><b>Receba ou retire.</b> Combine entrega ou retirada direto com a Bia.</li>
-        </ol>
       </section>
 
       <section className="insta" aria-labelledby="insta-h">
