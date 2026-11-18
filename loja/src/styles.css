@@ -1410,3 +1410,40 @@ h2 { font-size: clamp(1.7rem, 2vw, 2.1rem); line-height: 1.05; }
   .row__size select { min-height: 44px; }
   .facts div { grid-template-columns: 84px 1fr; gap: 12px; }
 }
+
+/* ---------- Celular: cabeçalho, abertura e filtros da Início sem cortes ---------- */
+@media (max-width: 900px) {
+  .frame > .top .top__nav { justify-content: space-between; gap: 2px; }
+  .hero { padding-top: 32px; padding-bottom: 36px; gap: 32px; }
+  .hero__copy { width: 100%; }
+  .hero__cta { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  .hero__cta .btn { width: 100%; justify-content: center; box-sizing: border-box; }
+  .hero__photo { margin-top: 4px; }
+  .hero__photo .note { position: static; display: block; margin: 12px 0 0; text-align: center; transform: none; }
+  .hero__photo .note--a { margin-top: 22px; }
+  .hero__photo .note--b { margin-top: 4px; }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .hero__cta { grid-template-columns: repeat(2, max-content); }
+  .hero__cta .btn { width: auto; }
+}
+.parede__head > * { min-width: 0; max-width: 100%; }
+@media (max-width: 600px) {
+  .seg--track, .hsearch { width: 100%; max-width: 100%; box-sizing: border-box; }
+  .seg--track button { min-width: 0; }
+}
+@media (max-width: 380px) {
+  .frame > .top .top__nav a { font-size: 0.9rem; padding-inline: 2px; }
+  .frame > .top .brand__name, .frame > .top .brand { font-size: 1.05rem; }
+  .bagbtn { padding: 0 14px; gap: 8px; font-size: 0.9375rem; }
+  .seg--track button { padding: 0 4px; font-size: 0.875rem; }
+  .hsearch { padding-left: 12px; gap: 6px; }
+  .hsearch__go { padding: 0 14px; }
+  .cats__box { padding: 18px 16px; }
+  .cats__item { padding: 8px 10px 8px 16px; font-size: 0.875rem; }
+}
+@media (max-width: 340px) {
+  .frame > .top .brand img { width: 40px; height: 40px; }
+  .frame > .top .brand { gap: 8px; font-size: 1rem; }
+  .frame > .top .bagbtn { padding: 0 12px; gap: 6px; font-size: 0.875rem; min-height: 44px; }
+}
