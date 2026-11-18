@@ -1548,3 +1548,7 @@ h2 { font-size: clamp(1.7rem, 2vw, 2.1rem); line-height: 1.05; }
   .parede__head .hsearch { order: 2; margin-left: auto; }
 }
 @media (min-width: 1101px) { .parede__head .hsearch { max-width: 460px; } }
+@media (min-width: 1101px) {
+  .parede__head .seg--track { margin-left: auto; }
+  .parede__head .hsearch { margin-left: 0; }
+}
