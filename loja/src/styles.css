@@ -1541,3 +1541,9 @@ h2 { font-size: clamp(1.7rem, 2vw, 2.1rem); line-height: 1.05; }
 .como .steps li { transition: none; }
 /* O card só se mexe enquanto a caixa está nele; os outros ficam parados (PC e celular) */
 .como .steps li { animation-name: step-on-m; animation-duration: 10s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; }
+
+/* PC: filtros ao lado do título e a busca no lado direito */
+@media (min-width: 1101px) {
+  .parede__head .seg--track { order: 1; }
+  .parede__head .hsearch { order: 2; margin-left: auto; }
+}
