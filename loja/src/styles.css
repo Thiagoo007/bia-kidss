@@ -1523,3 +1523,17 @@ h2 { font-size: clamp(1.7rem, 2vw, 2.1rem); line-height: 1.05; }
   .como__flow .trail__line { right: 30px; }
   .como__flow .trail__go { right: 16px; }
 }
+
+/* Celular: só a caixa anima; o card se mexe enquanto a caixa está nele */
+@keyframes step-on-m {
+  0%, 12% { translate: 0 -6px; box-shadow: 0 2px 4px rgb(42 37 56 / 0.05), 0 24px 34px -22px rgb(63 42 128 / 0.55), 0 0 0 2px var(--lilac); }
+  16%, 100% { translate: 0 0; }
+}
+@media (max-width: 600px) {
+  .como .steps li { animation-name: step-on-m; }
+  .como .steps li::before, .como .steps li:nth-child(n)::before { animation: none; }
+}
+
+/* Sem efeito ao passar o mouse nos passos: só a caixa anima */
+.como .steps li:hover, .como .steps li:nth-child(even):hover { transform: none; }
+.como .steps li:hover::before { transform: none; animation-play-state: running; }
