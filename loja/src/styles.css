@@ -1556,3 +1556,20 @@ h2 { font-size: clamp(1.7rem, 2vw, 2.1rem); line-height: 1.05; }
   .parede__head .seg--track { margin-left: 0; }
   .parede__head .hsearch { margin-left: auto; }
 }
+
+/* ---------- Celular: topo e abertura mais enxutos ---------- */
+@media (max-width: 600px) {
+  .frame > .top .brand img { width: 34px; height: 34px; }
+  .frame > .top .brand { font-size: 1rem; gap: 8px; min-height: 40px; }
+  .frame > .top .bagbtn { min-height: 38px; padding: 0 12px; gap: 6px; font-size: 0.875rem; }
+  .frame > .top .bagbtn svg { width: 16px; height: 16px; }
+  .frame > .top .bagbtn b { min-width: 22px; height: 22px; font-size: 0.75rem; }
+  .frame > .top .top__nav a { font-size: 0.875rem; min-height: 40px; }
+  .hero { padding-top: 22px; padding-bottom: 28px; gap: 24px; }
+  .hero h1 { font-size: 1.75rem; line-height: 1.12; }
+  .hero__copy p, .hero p { font-size: 0.9375rem; line-height: 1.5; }
+  .hero__cta { gap: 10px; }
+  .hero__cta .btn { min-height: 44px; font-size: 0.9375rem; }
+  .hero__photo { width: 82%; margin-inline: auto; }
+}
+@media (max-width: 340px) { .frame > .top .bagbtn { padding: 0 10px; font-size: 0.8125rem; } .hero h1 { font-size: 1.55rem; } }
