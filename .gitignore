@@ -5,12 +5,12 @@ dist-pages/
 .impeccable/
 .playwright-mcp/
 # material antigo / local, fora do site
-admin/
-site/
-site-navegavel/
-site-navegavel.zip
-_depois-do-painel-backup/
-fotos-loja/
+/admin/
+/site/
+/site-navegavel/
+/site-navegavel.zip
+/_depois-do-painel-backup/
+/fotos-loja/
 Bia KIDSS – Novo design da loja.html
 skills-lock.json
 *.log

@@ -1,0 +1,67 @@
+/* Painel da Bia (rota /admin). Só vale dentro de .adm; não mexe no estilo da loja. */
+.adm__login, .adm__form { display: grid; gap: 20px; max-width: 560px; }
+.adm__form--wide { max-width: 720px; }
+.adm__field { display: grid; gap: 6px; border: 0; padding: 0; margin: 0; min-width: 0; }
+.adm__field > span, .adm__field > legend { font-family: var(--f-hand); font-weight: 700; font-size: 1.1rem; padding: 0; }
+.adm__field input[type="text"], .adm__field input[type="email"], .adm__field input[type="password"], .adm__field input[type="search"], .adm__field select, .adm__field textarea {
+  min-height: 48px; width: 100%; border: 2px solid var(--graphite); border-radius: 8px; background: #fff; padding: 0 12px; font: 600 1rem var(--f-display); color: var(--graphite);
+}
+.adm__field textarea { padding: 10px 12px; resize: vertical; line-height: 1.4; }
+.adm__field small, .adm__check small { display: block; color: var(--graphite-soft); font-size: 0.85rem; font-weight: 400; }
+.adm__photo { background: var(--print); border: 2px dashed var(--graphite-soft); border-radius: 10px; min-height: 160px; display: grid; place-items: center; padding: 10px; }
+.adm__photo img { max-width: 100%; max-height: 340px; width: auto; height: auto; object-fit: contain; }
+.adm__photo p { margin: 0; color: var(--graphite-soft); }
+.adm__pick { position: relative; justify-self: start; cursor: pointer; }
+.adm__pick input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
+.adm__pick:focus-within { outline: 3px solid var(--violet); outline-offset: 3px; }
+.adm__check { display: flex; gap: 12px; align-items: flex-start; font-weight: 600; cursor: pointer; }
+.adm__check input { width: 24px; height: 24px; margin-top: 2px; flex: none; accent-color: var(--violet); }
+.adm__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.adm__del { justify-self: start; color: #9b1c1c; }
+.adm__add { justify-self: start; }
+.adm__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 520px) { .adm__pair { grid-template-columns: 1fr; } }
+.adm__note { color: var(--graphite-soft); font-size: 0.9rem; margin: -8px 0 0; }
+.adm__top { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-bottom: 24px; border-bottom: 2px solid var(--graphite); }
+.adm__tabs { display: flex; flex-wrap: wrap; gap: 4px; flex: 1 1 auto; }
+.adm__tabs button { min-height: 48px; padding: 0 20px; border: 2px solid transparent; border-bottom: 0; border-radius: 10px 10px 0 0; background: transparent; font: 700 1rem var(--f-display); color: var(--graphite-soft); cursor: pointer; margin-bottom: -2px; }
+.adm__tabs button[aria-selected="true"] { background: var(--print); border-color: var(--graphite); color: var(--graphite); }
+.adm__group { display: grid; gap: 14px; max-width: 720px; margin-bottom: 36px; }
+.adm__group .h3 { margin: 0; }
+.adm__help { margin: 0; color: var(--graphite-soft); }
+.adm__cats, .adm__faq { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 2px solid var(--graphite); }
+.adm__cats li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 0; border-bottom: 2px solid var(--graphite); }
+.adm__cats small { color: var(--graphite-soft); margin-left: 6px; }
+.adm__faq li { display: grid; gap: 12px; padding: 16px 0; border-bottom: 2px solid var(--graphite); }
+.adm__rename { display: flex; flex-wrap: wrap; gap: 10px; width: 100%; }
+.adm__rename input { flex: 1 1 200px; min-height: 48px; border: 2px solid var(--graphite); border-radius: 8px; padding: 0 12px; font: 600 1rem var(--f-display); }
+.adm__row-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.adm__bar { display: flex; flex-wrap: wrap; align-items: end; gap: 14px 24px; margin-bottom: 24px; }
+.adm__search { flex: 1 1 220px; max-width: 360px; }
+.adm__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 2px solid var(--graphite); }
+.adm__list li { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 14px 0; border-bottom: 2px solid var(--graphite); }
+.adm__list li.is-off { opacity: 0.6; }
+.adm__list img { width: 64px; height: 80px; object-fit: contain; background: var(--print); border: 2px solid var(--print); box-shadow: 0 1px 6px rgb(42 37 56 / 0.18); }
+.adm__list strong { display: block; }
+.adm__list span { display: block; font-size: 0.88rem; color: var(--graphite-soft); }
+.adm__list em { display: inline-block; margin-top: 4px; margin-right: 10px; font-size: 0.82rem; font-style: normal; font-weight: 700; color: var(--violet-deep); }
+.adm__list .adm__row-actions { flex-direction: column; align-items: flex-end; }
+.adm__list em.adm__tag-promo { color: #b4233b; }
+.hint--ok { border-color: #2f7d4f; }
+@media (max-width: 520px) {
+  .adm__list li { grid-template-columns: 56px minmax(0, 1fr); }
+  .adm__list li .adm__row-actions { grid-column: 1 / -1; flex-direction: row; align-items: center; }
+}
+.adm__list .btn--line { width: auto; margin-top: 0; min-height: 44px; }
+.adm__list .adm__row-actions, .adm__list li .adm__row-actions { flex-direction: row; align-items: center; justify-content: flex-end; gap: 4px 12px; }
+.adm__list li { align-items: start; }
+.adm__list img { align-self: start; }
+@media (max-width: 760px) { .adm__list li { grid-template-columns: 56px minmax(0, 1fr); } .adm__list li .adm__row-actions { grid-column: 1 / -1; justify-content: flex-start; } }
+.adm__brand { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; padding: 12px var(--gutter); background: var(--violet-deep); color: #fff; }
+.adm__brand img { border-radius: 50%; border: 2px solid #fff; }
+.adm__brand strong { margin-right: auto; font-size: 1.1rem; }
+.adm__brand .linkbtn { color: #fff; }
+.adm__brand :focus-visible { outline-color: #fff; }
+.adm__new { display: grid; gap: 8px; justify-items: start; margin-bottom: 24px; padding: 20px; background: var(--wall-light); border: 2px dashed var(--violet); border-radius: 14px; }
+.adm__newbtn { min-height: 56px; font-size: 1.1rem; }
+.adm__again { width: auto; margin-top: 0; }
