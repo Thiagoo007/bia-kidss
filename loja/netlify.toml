@@ -1,0 +1,26 @@
+# Publicação no Netlify. Pasta do site: loja. Comando: npm run build. Saída: dist.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Qualquer endereço (/produto/33, /sacola) abre o site, em vez de dar 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Arquivos com nome único (assets) podem ficar guardados por um ano; o HTML sempre se atualiza.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache"
