@@ -1552,3 +1552,7 @@ h2 { font-size: clamp(1.7rem, 2vw, 2.1rem); line-height: 1.05; }
   .parede__head .seg--track { margin-left: auto; }
   .parede__head .hsearch { margin-left: 0; }
 }
+@media (min-width: 1101px) {
+  .parede__head .seg--track { margin-left: 0; }
+  .parede__head .hsearch { margin-left: auto; }
+}
