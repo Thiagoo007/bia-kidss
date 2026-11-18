@@ -1537,3 +1537,5 @@ h2 { font-size: clamp(1.7rem, 2vw, 2.1rem); line-height: 1.05; }
 /* Sem efeito ao passar o mouse nos passos: só a caixa anima */
 .como .steps li:hover, .como .steps li:nth-child(even):hover { transform: none; }
 .como .steps li:hover::before { transform: none; animation-play-state: running; }
+.como .steps li::before, .como .steps li:nth-child(n)::before, .como .steps li:hover::before { animation: none !important; transform: none; }
+.como .steps li { transition: none; }
