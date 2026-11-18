@@ -1447,3 +1447,13 @@ h2 { font-size: clamp(1.7rem, 2vw, 2.1rem); line-height: 1.05; }
   .frame > .top .brand { gap: 8px; font-size: 1rem; }
   .frame > .top .bagbtn { padding: 0 12px; gap: 6px; font-size: 0.875rem; min-height: 44px; }
 }
+
+/* ---------- Categorias no celular: lado a lado, em grade uniforme ---------- */
+@media (max-width: 800px) {
+  .cats__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: 100%; }
+  .cats__list > li { min-width: 0; }
+  .cats__item { width: 100%; box-sizing: border-box; justify-content: center; text-align: center; padding: 10px 12px; gap: 8px; white-space: normal; line-height: 1.2; min-height: 48px; }
+  .cats__list > li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@media (max-width: 380px) { .cats__item { padding: 8px 8px; font-size: 0.8125rem; gap: 6px; } }
+@media (max-width: 800px) { .cats__list > li { display: flex; } .cats__item { height: auto; flex: 1; } }
